@@ -1,0 +1,10 @@
+@mixin display {
+    width: var(--width);
+    color: white;
+}
+
+@mixin displayFlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

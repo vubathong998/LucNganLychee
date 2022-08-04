@@ -1,0 +1,19 @@
+@mixin btnAfterAnimation {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(219, 84, 84);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 250ms ease-in;
+    user-select: none;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@mixin hoverBtnAfterAnimation {
+    transform: scaleX(1);
+}

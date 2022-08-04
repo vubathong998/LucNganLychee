@@ -1,0 +1,21 @@
+@import '../GlobalStyle/GlobalAnimation.module.scss';
+.type1 {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    transition: 0.5s;
+    z-index: 1;
+    position: relative;
+    &:hover {
+        cursor: pointer;
+    }
+    &::after {
+        @include btnAfterAnimation();
+    }
+}
+
+.type1:hover::after {
+    transform: scale(1);
+}

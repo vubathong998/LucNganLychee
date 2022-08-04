@@ -1,0 +1,53 @@
+@import '../../GlobalStyle/GlobalVariables.module.scss';
+
+.header {
+    background-color: #222;
+    height: 60px;
+    @include displayFlexCenter();
+}
+.headerContent {
+    @include display();
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    width: 100px;
+}
+
+.actions {
+    display: flex;
+    font-size: 1.6rem;
+    align-items: center;
+    a {
+        display: inline-block;
+        width: 130px;
+        display: flex;
+        justify-content: center;
+    }
+    & > div {
+        border-left: 1px solid rgb(97, 97, 97);
+        height: 60px;
+    }
+    & > div:last-child {
+        border-right: 1px solid rgb(97, 97, 97);
+    }
+}
+
+.gotPadding {
+    margin: 15px;
+    width: 110px;
+    transition: 0.6s ease;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    &:hover {
+        color: #fe2c55;
+        cursor: pointer;
+        user-select: none;
+    }
+}
+
+.icon {
+    margin-right: 5px;
+}
