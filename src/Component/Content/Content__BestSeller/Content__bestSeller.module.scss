@@ -1,0 +1,28 @@
+@import '../../../GlobalStyle/GlobalAnimation.module.scss';
+
+.container {
+}
+
+.link {
+    ul {
+        display: flex;
+        justify-content: start;
+        flex-direction: row;
+        li > a {
+            display: inline-block;
+            padding: 10px 40px;
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: 600;
+            color: black;
+            position: relative;
+        }
+        li a:after {
+            @include linkAnimation1();
+        }
+    }
+}
+
+.link ul li a:hover::after {
+    @include hoverLinkAnimation1();
+}

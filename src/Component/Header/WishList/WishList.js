@@ -1,5 +1,5 @@
-function WishList({ children }) {
+function Wishlist({ children }) {
     return <div>{children}</div>;
 }
 
-export default WishList;
+export default Wishlist;

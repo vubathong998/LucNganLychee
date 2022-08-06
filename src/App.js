@@ -1,13 +1,20 @@
 import Header from '~/Component/Header/Header';
-import ContentImg from '~/Component/Content/ContentImg/ContentImg';
+import Content from '~/Component/Content/Content';
+import { useState, createContext } from 'react';
+export const CurrentContext = createContext();
+
 function App() {
+    const [currentLanguage, setCurrentLanguage] = useState('VN');
+
     return (
-        <div className="App">
-            <div>
-                <Header />
-                <ContentImg />
+        <CurrentContext.Provider value={[currentLanguage, setCurrentLanguage]}>
+            <div className="App">
+                <div>
+                    <Header />
+                    <Content />
+                </div>
             </div>
-        </div>
+        </CurrentContext.Provider>
     );
 }
 

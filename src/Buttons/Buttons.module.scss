@@ -19,3 +19,21 @@
 .type1:hover::after {
     transform: scale(1);
 }
+
+.type2 {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    font-weight: 900;
+    background: rgb(170, 170, 170);
+    width: 30px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    transition: 0.2s;
+    transform: translateY(-50%);
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(137, 137, 137);
+    }
+}

@@ -21,7 +21,6 @@ function Language({ propLanguage, children }) {
     const handleOnclickLanguage = (e) => {
         e === 1 ? propLanguage[1]('VN') : propLanguage[1]('EN');
     };
-
     return (
         <div>
             <HeadlessTippy
