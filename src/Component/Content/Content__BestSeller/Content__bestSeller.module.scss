@@ -1,6 +1,11 @@
 @import '../../../GlobalStyle/GlobalAnimation.module.scss';
 
 .container {
+    border: 1px solid rgb(206, 206, 206);
+    margin-top: 180px;
+}
+.content {
+    padding: 80px 20px;
 }
 
 .link {
@@ -8,19 +13,31 @@
         display: flex;
         justify-content: start;
         flex-direction: row;
+        li {
+            border-right: 1px solid rgb(233, 233, 233);
+        }
         li > a {
-            display: inline-block;
+            display: flex;
+            justify-content: center;
             padding: 10px 40px;
             text-transform: uppercase;
             font-size: 2rem;
             font-weight: 600;
             color: black;
             position: relative;
+            width: 300px;
         }
         li a:after {
             @include linkAnimation1();
         }
     }
+}
+
+.straightLine {
+    width: 1500px;
+    height: 2px;
+    background-color: rgb(233, 233, 233);
+    // margin-top: 10px;
 }
 
 .link ul li a:hover::after {

@@ -1,13 +1,16 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/alt-text */
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import logo from '~/pictures/logo.png';
 import Language from './TippyHeader/Language';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faLanguage, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
-import { CurrentContext } from '~/App';
+import {
+    faGlassCheers,
+    faHeart,
+    faLanguage,
+    faMagnifyingGlass,
+    faRightFromBracket,
+} from '@fortawesome/free-solid-svg-icons';
+import { CurrentLanguageContext } from '~/App';
 import { useContext } from 'react';
 
 import Wishlist from './Wishlist/Wishlist';
@@ -15,12 +18,18 @@ import Wishlist from './Wishlist/Wishlist';
 const cx = classNames.bind(styles);
 
 function Header() {
-    const currentLanguage = useContext(CurrentContext)[0];
-    const setCurrentLanguage = useContext(CurrentContext)[1];
+    const currentLanguage = useContext(CurrentLanguageContext)[0];
+    const setCurrentLanguage = useContext(CurrentLanguageContext)[1];
     return (
         <div className={cx('header')}>
             <div className={cx('headerContent')}>
-                <img className={cx('logo')} src={logo} />
+                <div className={cx('logoInput')}>
+                    <img className={cx('logo')} src={logo} />
+                    <input className={cx('input')} placeholder={currentLanguage === 'VN' ? 'Tìm kiếm' : 'Search'} />
+                    <a href="#" className={cx('iconInput')}>
+                        <FontAwesomeIcon className={cx('iconInput__child')} icon={faMagnifyingGlass} />
+                    </a>
+                </div>
                 <div className={cx('actions')}>
                     <div>
                         <Wishlist>

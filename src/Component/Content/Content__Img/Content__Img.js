@@ -42,11 +42,11 @@ function ContentImg() {
     return (
         <div className={cx('contentImg')}>
             <div className={cx('direction')}>
-                <Buttons type="2" left={0}>
-                    <FontAwesomeIcon icon={faChevronLeft} onClick={clickLeftIcon} />
+                <Buttons type="2" left={0} onClick={clickLeftIcon}>
+                    <FontAwesomeIcon icon={faChevronLeft} />
                 </Buttons>
-                <Buttons type="2" right={0}>
-                    <FontAwesomeIcon icon={faChevronRight} onClick={clickRightIcon} />
+                <Buttons type="2" right={0} onClick={clickRightIcon}>
+                    <FontAwesomeIcon icon={faChevronRight} />
                 </Buttons>
             </div>
             {<img className={cx('img')} src={linkImgs[currentPicture].link} />}

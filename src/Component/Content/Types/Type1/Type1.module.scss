@@ -1,18 +1,27 @@
 .container {
-    border: 1px solid #000;
+    margin-top: 20px;
     width: 200px;
     height: 280px;
 }
 
 .pic {
     height: 200px;
-    border: 1px solid yellow;
     overflow: hidden;
     position: relative;
+    border: 1px solid rgb(160, 160, 160);
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+}
+
+.cart {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.35rem;
+    span {
+        margin-right: 5px;
     }
 }
 
@@ -24,43 +33,67 @@
 .picAnimation {
     position: absolute;
     width: 100%;
-    height: 50px;
-    bottom: 40px;
+    height: 42px;
+    bottom: 36px;
     left: 0;
-    background-color: white;
-    border: 1px solid #000;
+    background-color: #000;
     user-select: none;
-    transition: 0.5s ease;
+    transition: 0.3s ease-out;
     transform: translateX(100%);
+    a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.4s;
+        &:hover {
+            background-color: #7c44e3;
+        }
+    }
+    &:hover .span {
+        animation: linear span 0.7s forwards;
+    }
 }
 
 .picAnimation2 {
     position: absolute;
     width: 100%;
-    height: 50px;
+    height: 36px;
     bottom: 0;
     left: 0;
-    background-color: #000;
+    background-color: #fff;
     user-select: none;
-    transition: 0.5s ease;
+    transition: 0.3s ease-out;
     transform: translateX(-100%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    a {
+        border-left: 1px solid rgb(220, 220, 220);
+        font-size: 1.43rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        transition: 0.4s;
+        color: black;
+        &:hover {
+            color: #7c44e3;
+        }
+    }
 }
 
-.pic img:hover ~ .show,
+.pic:hover .show,
 .show:hover {
-    transform: translateX(0);
-}
-
-.picAnimation:hover ~ .picAnimation2 {
-    transform: translateX(0);
-}
-.picAnimation1:hover + .picAnimation {
     transform: translateX(0);
 }
 
 .name {
     font-size: 1.8rem;
     margin-top: 8px;
+    font-weight: 400;
 }
 
 .content {
@@ -76,4 +109,42 @@
     text-decoration: line-through;
     font-size: 1.4rem;
     margin-right: 5px;
+}
+
+.tippyContainer {
+    background-color: #7c44e3;
+    padding: 0 17px;
+    border-radius: 7px;
+    color: white;
+    position: relative;
+    font-size: 1.5rem;
+    span {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #7c44e3;
+        font-size: 2.4rem;
+    }
+}
+
+@keyframes span {
+    17% {
+        transform: translateX(30%);
+    }
+    34% {
+        transform: translateX(0);
+    }
+    51% {
+        transform: translateX(30%);
+    }
+    68% {
+        transform: translateX(0);
+    }
+    85% {
+        transform: translateX(30%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }

@@ -1,5 +1,5 @@
 import { Routes, Route, Link } from 'react-router-dom';
-import { CurrentContext } from '~/App';
+import { CurrentLanguageContext } from '~/App';
 import { useContext } from 'react';
 
 import classNames from 'classnames/bind';
@@ -11,15 +11,13 @@ import Page__TheBest from './BestSeller__pages/Page__TheBest/Page__TheBest';
 const cx = classNames.bind(styles);
 
 function Content__BestSeller() {
-    const language = useContext(CurrentContext)[0];
+    const language = useContext(CurrentLanguageContext)[0];
     return (
         <div className={cx('container')}>
             <div className={cx('link')}>
                 <ul>
                     <li>
-                        <Link to="/BestSeller__pages/Page__BestSeller">
-                            {language === 'VN' ? 'Bán chạy nhất' : 'BestSeller'}
-                        </Link>
+                        <Link to="/">{language === 'VN' ? 'Bán chạy nhất' : 'BestSeller'}</Link>
                     </li>
                     <li>
                         <Link to="/BestSeller__pages/Page__Featured">
@@ -31,12 +29,14 @@ function Content__BestSeller() {
                     </li>
                 </ul>
             </div>
-
-            <Routes>
-                <Route path="BestSeller__pages/Page__BestSeller" element={<Page__BestSeller />} />
-                <Route path="BestSeller__pages/Page__Featured" element={<Page__Featured />} />
-                <Route path="BestSeller__pages/Page__TheBest" element={<Page__TheBest />} />
-            </Routes>
+            <div className={cx('straightLine')}></div>
+            <div className={cx('content')}>
+                <Routes>
+                    <Route path="/" element={<Page__BestSeller />} />
+                    <Route path="BestSeller__pages/Page__Featured" element={<Page__Featured />} />
+                    <Route path="BestSeller__pages/Page__TheBest" element={<Page__TheBest />} />
+                </Routes>
+            </div>
         </div>
     );
 }

@@ -1,20 +1,20 @@
 import Header from '~/Component/Header/Header';
 import Content from '~/Component/Content/Content';
 import { useState, createContext } from 'react';
-export const CurrentContext = createContext();
+export const CurrentLanguageContext = createContext();
 
 function App() {
-    const [currentLanguage, setCurrentLanguage] = useState('VN');
+    const [currentContext, setCurrentContext] = useState('VN');
 
     return (
-        <CurrentContext.Provider value={[currentLanguage, setCurrentLanguage]}>
+        <CurrentLanguageContext.Provider value={[currentContext, setCurrentContext]}>
             <div className="App">
                 <div>
                     <Header />
                     <Content />
                 </div>
             </div>
-        </CurrentContext.Provider>
+        </CurrentLanguageContext.Provider>
     );
 }
 

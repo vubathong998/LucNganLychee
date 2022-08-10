@@ -8,6 +8,10 @@ function Page__BestSeller() {
     return (
         <div className={cx('container')}>
             <Type1 type={Picture[0]} />
+            <Type1 type={Picture[2]} />
+            <Type1 type={Picture[4]} />
+            <Type1 type={Picture[5]} />
+            <Type1 type={Picture[6]} />
         </div>
     );
 }
