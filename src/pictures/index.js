@@ -1,3 +1,4 @@
+import logo from './logo.png';
 import buoi1 from './buoi1.jpg';
 import buoi2 from './buoi2.jpg';
 import buoi3 from './buoi3.jpg';
@@ -20,6 +21,33 @@ import travel9 from './travel/tw1.jpg';
 import travel10 from './travel/fth3.jpg';
 import travel11 from './travel/ftw1.jpg';
 import travel12 from './travel/tw2.jpg';
+import apps1 from './apps/appstore.png';
+import apps2 from './apps/callnery.png';
+import apps3 from './apps/googlePlay.jpg';
+import appsZalo from './apps/zalo.jpg';
+
+const apps = [
+    {
+        id: 1,
+        pic: appsZalo,
+        name: 'zalo',
+    },
+    {
+        id: 1,
+        pic: apps1,
+        name: 'appStore',
+    },
+    {
+        id: 2,
+        pic: apps2,
+        name: 'appStore',
+    },
+    {
+        id: 3,
+        pic: apps3,
+        name: 'appStore',
+    },
+];
 
 const travel = [
     {
@@ -173,4 +201,4 @@ const Picture = [
 ];
 
 export default Picture;
-export { travel };
+export { travel, logo, apps };

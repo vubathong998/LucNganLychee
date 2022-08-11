@@ -1,0 +1,71 @@
+.container {
+    width: 1500px;
+    margin: 200px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.moreInfo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 150px;
+}
+.container-logo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contentCol {
+    margin: 20px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .icon {
+        font-size: 3rem;
+    }
+    div ~ div {
+        margin-left: 30px;
+    }
+    a {
+        font-size: 1.4rem;
+    }
+}
+
+.midContent {
+    p {
+        padding: 9px;
+        a {
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: black;
+            transition: 0.2s;
+            &:hover {
+                color: red;
+            }
+        }
+    }
+    h4 {
+        margin-bottom: 20px;
+    }
+}
+
+.app {
+    display: flex;
+    justify-content: start;
+    img {
+        width: 100px;
+        margin-left: 20px;
+        object-fit: contain;
+    }
+    .logoImg {
+        display: flex;
+        flex-direction: column;
+        img {
+            margin-top: 20px;
+        }
+    }
+}

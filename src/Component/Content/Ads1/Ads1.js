@@ -2,7 +2,6 @@ import { travel } from '~/pictures';
 
 import styles from './Ads1.module.scss';
 import classNames from 'classnames/bind';
-import Type2 from '../Types/Type2/Type2';
 
 const cx = classNames.bind(styles);
 
@@ -32,14 +31,23 @@ function Ads1() {
                 </div>
             </div>
             <div className={cx('picture')}>
-                <div className={cx('piece1')}>
-                    <img src={travel[9].pic} />
+                <div className={cx('piece1', 'piece')}>
+                    <img src={travel[9].pic} alt="travel" />
+                    <div className={cx('more1', 'more')}>
+                        <button>Tìm hiểu thêm</button>
+                    </div>
                 </div>
-                <div className={cx('piece2')}>
-                    <img src={travel[11].pic} />
+                <div className={cx('piece2', 'piece')}>
+                    <img src={travel[11].pic} alt="travel" />
+                    <div className={cx('more2', 'more')}>
+                        <button>Tìm hiểu thêm</button>
+                    </div>
                 </div>
-                <div className={cx('piece3')}>
-                    <img src={travel[10].pic} />
+                <div className={cx('piece3', 'piece')}>
+                    <img src={travel[10].pic} alt="travel" />
+                    <div className={cx('more3', 'more')}>
+                        <button>Tìm hiểu thêm</button>
+                    </div>
                 </div>
             </div>
         </div>
