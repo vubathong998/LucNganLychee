@@ -1,0 +1,17 @@
+.container {
+    border: 1px solid rgb(216, 216, 216);
+    width: 1500px;
+    margin: 200px auto;
+    // flex-direction: column;
+    h1 {
+        margin: 10px 0 0 80px;
+    }
+}
+
+.pictures {
+    display: flex;
+    height: 450px;
+    border-top: 1px solid rgb(216, 216, 216);
+    justify-content: space-around;
+    align-items: center;
+}

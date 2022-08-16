@@ -4,7 +4,7 @@ import styles from './Type1.module.scss';
 import { useContext } from 'react';
 import { CurrentLanguageContext } from '~/App';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown, faCartArrowDown, faCodeCompare, faEye, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faCartArrowDown, faCodeCompare, faEye, faHeart } from '@fortawesome/free-solid-svg-icons';
 import Type1__tippy from './Type1__tippy';
 
 const cx = classNames.bind(styles);
@@ -58,6 +58,9 @@ function Type1({ type }) {
                             <b>{type.cost}VND</b>
                         )}
                     </span>
+                </p>
+                <p className={cx('buy')}>
+                    <a href="#">{language === 'VN' ? 'Mua ngay' : 'Buy now'}</a>
                 </p>
             </div>
         </div>
