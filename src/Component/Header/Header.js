@@ -13,7 +13,7 @@ import {
 import { CurrentLanguageContext } from '~/App';
 import { useContext } from 'react';
 
-import Wishlist from './Wishlist/Wishlist';
+import Wishlist from './WishList/WishList';
 
 const cx = classNames.bind(styles);
 
